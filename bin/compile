@@ -15,6 +15,8 @@ JRE_ARHIVE_FILE_ZIP=$bp_dir/files/jre-8u45-linux-x64.zip
 #unzip jre
 unzip $JRE_ARHIVE_FILE_ZIP -d $bp_dir/files/
 chmod 755 $JRE_ARHIVE_FILE
+mv $JRE_ARHIVE_FILE $JRE_ARHIVE_FILE.bin
+JRE_ARHIVE_FILE_ZIP=$JRE_ARHIVE_FILE_ZIP.bin
 
 # CF Common
 BUILDPACK_PATH=$bp_dir
@@ -26,7 +28,7 @@ source $bp_dir/bin/common.sh
 mkdir -p $vendor_dir
 
 status "Installing java."
-cp $JRE_ARHIVE_FILE $vendor_dir.bin
+cp $JRE_ARHIVE_FILE $vendor_dir
 cd $vendor_dir
 ./$JRE_ARHIVE
 rm $JRE_ARHIVE
