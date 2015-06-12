@@ -8,7 +8,7 @@ build_dir=$1
 cache_dir=$2
 bp_dir=$(cd $(dirname $0); cd ..; pwd)
 vendor_dir=$build_dir/vendor
-JRE_ARHIVE=jre-8u45-linux-x64
+JRE_ARHIVE=jre-8u45-linux-x64.bin
 JRE_ARHIVE_FILE=$bp_dir/files/jre-8u45-linux-x64
 JRE_ARHIVE_FILE_ZIP=$bp_dir/files/jre-8u45-linux-x64.zip
 
